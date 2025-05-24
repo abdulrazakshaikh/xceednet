@@ -18,8 +18,11 @@ class ImagePickerUtil {
                     alignment: Alignment.topLeft,
                     child: Text(
                       'Select Source',
-                      style: Theme.of(context).textTheme.headline2?.copyWith(
-                          fontSize: 20,
+                      style: Theme.of(context)
+                          .textTheme
+                          .displayMedium
+                          ?.copyWith(
+                              fontSize: 20,
                           fontWeight: FontWeight.bold,
                           fontFamily: "RobotoRegular"),
                     ),

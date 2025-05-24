@@ -746,8 +746,9 @@ class _SubscribersDetailsCardState extends State<SubscribersDetailsCard>
                             try {
                               AppUtils.launchURL(
                                 ""
-                                "${SharedPrefs().getDomainUrl()}/subscribers/${widget.subscriberDetail["id"]}/generate_caf_form.pdf",
-                              );
+                                  "${SharedPrefs().getDomainUrl()}/subscribers/${widget.subscriberDetail["id"]}/generate_caf_form.pdf",
+                                  fileName:
+                                      widget.subscriberDetail["id"].toString());
                             } catch (e) {
                               AppUtils.appToast(e.toString());
                             }

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -144,16 +143,16 @@ class SubscriberListItemState extends State<SubscriberListItem> {
                         SizedBox(height: 3),
                         Container(
                           decoration: BoxDecoration(
-                            color:
-                                item["subscribers.online"].toString() != 'false'
-                                    ? Colors.greenAccent.shade700
+                            color: item["subscribers.is_online"].toString() !=
+                                    'false'
+                                ? Colors.greenAccent.shade700
                                     : Colors.redAccent.shade700,
                             borderRadius: BorderRadius.circular(4),
                           ),
                           padding:
                               EdgeInsets.symmetric(horizontal: 10, vertical: 3),
                           child: Text(
-                            '${item["subscribers.online"].toString() != 'false' ? 'online' : 'offline'}',
+                            '${item["subscribers.is_online"].toString() != 'false' ? 'online' : 'offline'}',
                             style: GoogleFonts.roboto(
                                 textStyle:
                                     Theme.of(context).textTheme.bodyMedium,

@@ -68,7 +68,7 @@ class AppUtils {
     );
   }
 
-  static launchURL(String url) async {
+  static launchURL(String url, {String? fileName = null}) async {
     // const url = 'https://flutter.dev/exapmle.pdf';
     /* if (await canLaunch(url)) {
       //header['Authentication'] = SharedPrefs().authTokenn!
@@ -79,15 +79,19 @@ class AppUtils {
     } else {
       throw 'Could not launch $url';
     }*/
-    Map<Permission, PermissionStatus> statuses = await [
-      Permission.storage,
-      //add more permission to request here.
-    ].request();
-    if (statuses[Permission.storage]!.isGranted) {
+    var status = await Permission.storage.status;
+    if (!status.isGranted) {
+      await Permission.storage.request();
+    }
+    if (status.isGranted) {
       Directory dir = Directory('/storage/emulated/0/Download');
       if (dir != null) {
         var split = url.split("/");
+
         String savename = "${split[split.length - 1]}";
+        if (fileName != null) {
+          savename = "$fileName${split[split.length - 1]}";
+        }
         String savePath = dir.path + "/$savename";
         print(savePath);
         //output:  /storage/emulated/0/Download/banner.png
@@ -105,6 +109,7 @@ class AppUtils {
           OpenFilex.open(savePath);
           print("File is saved to download folder.");
         } on DioError catch (e) {
+          print("e.message");
           print(e.message);
         }
       }

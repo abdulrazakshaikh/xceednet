@@ -17,7 +17,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.6
   google_fonts: ^6.1.0
-  timelines: ^0.1.0
+  #timelines: ^0.1.0
   provider: ^6.0.5
   fluttertoast: ^8.2.2
   shared_preferences: ^2.2.1

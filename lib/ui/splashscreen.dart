@@ -1,8 +1,4 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:xceednet/model/storage/shared_prefs.dart';
 import 'package:xceednet/ui/dashboard.dart';
 import 'package:xceednet/ui/login/login.dart';
@@ -98,7 +94,7 @@ class SplashScreenState extends State<SplashScreen>
                             letterSpacing: 1.5, fontWeight: FontWeight.w100)),
                   ),
                   Text(
-                    '1.0.0',
+                    '1.0.3',
                     style: Theme.of(context).textTheme.bodyMedium!.merge(
                         TextStyle(
                             letterSpacing: 1.5, fontWeight: FontWeight.bold)),

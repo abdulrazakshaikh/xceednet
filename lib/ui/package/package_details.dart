@@ -179,7 +179,7 @@ class _PackageDetailsState extends State<PackageDetails>
                                             style: GoogleFonts.robotoCondensed(
                                               textStyle: Theme.of(context)
                                                   .textTheme
-                                                  .headline6,
+                                                  .titleLarge,
                                               fontWeight: FontWeight.w800,
                                               letterSpacing: 1,
                                             ),
