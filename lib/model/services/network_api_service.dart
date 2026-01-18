@@ -68,6 +68,8 @@ class NetworkApiService extends BaseService {
       return responseJson;
     } catch (e) {
       print(e);
+      return NewAPIResponse(
+          status: "FAILURE", message: "Error Agreement", data: null);
     }
   }
 

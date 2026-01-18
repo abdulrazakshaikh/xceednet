@@ -21,7 +21,7 @@ class _DashboardState extends State<Dashboard> {
     // TODO: implement initState
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await dashboardViewModel.getDashboardData();
+      bool status = await dashboardViewModel.getDashboardData();
       if (dashboardViewModel.dashboardData != null) {
         dashboardData = dashboardViewModel.dashboardData;
         // locationList = dashboardViewModel.userlocationAccess;

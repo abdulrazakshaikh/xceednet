@@ -94,7 +94,7 @@ class SplashScreenState extends State<SplashScreen>
                             letterSpacing: 1.5, fontWeight: FontWeight.w100)),
                   ),
                   Text(
-                    '1.0.3',
+                    '6.0.0',
                     style: Theme.of(context).textTheme.bodyMedium!.merge(
                         TextStyle(
                             letterSpacing: 1.5, fontWeight: FontWeight.bold)),

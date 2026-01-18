@@ -19,15 +19,17 @@ class DashboardViewModel extends ChangeNotifier {
     try {
       _isLoading = true;
       notifyListeners();
-      var _userdata = await new DashboardRepository().getDashboardData({
-      });
-      _isLoading = false;
-      notifyListeners();
+      var _userdata = await DashboardRepository().getDashboardData({});
+      print("objectobjectobjectobject :$_userdata");
+      //_isLoading = false;
+      //notifyListeners();
+
       if (!_userdata.isSuccess) {
         _error = _userdata.message;
         return false;
       } else {
         dashboardData = _userdata.data;
+        _isLoading = false;
         print('sss');
         // SharedPrefs().authToken=_userdata.data['auth_token'];
         //SharedPrefs().isLogin = true;
