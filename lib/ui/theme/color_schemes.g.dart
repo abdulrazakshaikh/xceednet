@@ -403,7 +403,7 @@ NavigationRailThemeData darkNavigationRailTheme = NavigationRailThemeData(
 );
 
 // ------CARD THEME--------//
-CardTheme lightCardTheme = CardTheme(
+CardThemeData lightCardTheme = CardThemeData(
   elevation: 0,
   color: arscardLight,
   surfaceTintColor: arscardLight,
@@ -412,7 +412,7 @@ CardTheme lightCardTheme = CardTheme(
     side: BorderSide(width: 1, color: arsoutline.withOpacity(0.1)),
   ),
 );
-CardTheme darkCardTheme = CardTheme(
+CardThemeData darkCardTheme = CardThemeData(
   elevation: 0,
   color: arscardDark,
   surfaceTintColor: arscardDark,
